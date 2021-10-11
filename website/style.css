@@ -1,0 +1,186 @@
+:root{
+    --main-color: rgb(95, 95, 241);
+}
+
+body{
+    background: var(--main-color);
+    background-repeat: no-repeat;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+    display: grid;
+    grid-auto-rows: minmax(150px, auto);  
+    height:100vh;
+    background-image: url('image/301566_beautiful-hd-wallpapers-weather-and-phenomena-backgrounds_1920x1080_h.jpg');
+    color: #f0d43a;
+    justify-content: center;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.headline {
+    margin: 20px auto;
+    text-align: center;
+    color: aqua;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+input{
+    font-size: 20px;
+    padding: 15px 0px;
+    width: 100%;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-top: 20px;
+    letter-spacing: 5px;
+    background: none;
+    border-color: transparent transparent rgb(45, 136, 221) transparent;
+}
+
+.feel textarea{
+    display: block;
+    padding: 15px 10px;
+    font-size: 20px;
+    border: 1px solid #000;
+    border-radius: 2%;
+    width: 100%;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-top: 20px;
+    letter-spacing: 5px;
+    background-color: rgba(9, 199, 183, 0.432); 
+    transition: all .25s linear;
+}
+.feel textarea:focus{
+    background: none;
+}
+.feel textarea:focus::placeholder{
+    opacity: 0;
+}
+
+#generate {
+    padding: 20px;
+    background-color: var(--main-color);
+    border: none;
+    box-shadow: -4px 6px 10px #000;
+    cursor: pointer;
+    transition: all .25s ease;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 6%;
+    margin-top: 15px;
+}
+#generate:hover{
+    background: none;
+    color: #000;
+}
+
+
+.entry{
+    margin-top: 15px;
+    background-color: rgba(143, 142, 142, 0.479);
+    border: 1px solid #000;
+    padding: 15px;
+}
+
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.entry .title {
+    text-align: center;
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#entryHolder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#entryHolder div:first-child {
+    width: 100%;
+    margin: 2%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#entryHolder div:not(:first-child){
+    width: 40%;
+    margin: 2%;
+    font-size: 30px;
+    font-weight: bold;
+}
+/*warning message*/
+
+.warn{
+    background: rgba(255, 255, 255, 0.466);
+    padding: 6px;
+    margin-top: 15px;
+    display: block;
+    width: 30%;
+    border-radius: 5%;
+    color: red;
+    position: relative;
+    animation: opacity .25s linear;
+    display: none;
+}
+
+
+.warn::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent rgb(255, 255, 255) transparent;
+    border-width: 10px;
+    border-style: solid;
+    bottom: 99%;
+    left: 50%;
+    transition: all .25s ease;
+    animation: opacity .25s linear;
+}
+
+/*all label*/
+
+label{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: var(--main-color); 
+    font-family: 'Oswald', sans-serif;
+
+} 
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
